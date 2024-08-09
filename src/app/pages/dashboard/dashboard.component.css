@@ -1,0 +1,43 @@
+/* src/app/pages/state-dashboard/state-dashboard.component.css */
+
+/* Container for selects and stats */
+.select-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Group for each select with label */
+  .select-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for state and district selectors */
+  #stateSelect, #districtSelect {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* Label styling */
+  .select-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Display of selected state/district stats */
+  .stats-charts-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure stats and charts are displayed properly */
+  app-district-stats, app-district-chart {
+    margin-bottom: 20px;
+  }
+  

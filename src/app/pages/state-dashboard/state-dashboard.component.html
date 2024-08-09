@@ -1,0 +1,9 @@
+<!-- src/app/pages/state-dashboard/state-dashboard.component.html -->
+<div class="state-dashboard">
+    <div *ngFor="let state of getStateOptions()" class="state-card">
+      <h3>{{ state }}</h3>
+      <app-stats [data]="statesData[state]?.total"></app-stats>
+      <app-chart [data]="statesData[state]?.total"></app-chart>
+    </div>
+  </div>
+  

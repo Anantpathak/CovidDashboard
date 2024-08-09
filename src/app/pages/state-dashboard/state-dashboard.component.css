@@ -1,0 +1,85 @@
+/* In your state-dashboard.component.css file */
+.state-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 15px; /* Space between cards */
+    padding: 10px; /* Optional padding around the grid */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure container fits the viewport width */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  /* Style for each state card */
+  .state-card {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-height: 150px; /* Smaller height */
+    box-sizing: border-box; /* Include padding in height calculation */
+  }
+  
+  /* Title inside each state card */
+  .state-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Margin for stats and charts inside state card */
+  .state-card app-stats,
+  .state-card app-chart {
+    margin-top: 10px;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Button for switching to district view */
+  .district-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the button */
+  .district-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  
+  /* For tablets and smaller screens (up to 768px) */
+  @media (max-width: 768px) {
+    .state-dashboard {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust size for tablets */
+    }
+  }
+  
+  /* For mobile phones (up to 480px) */
+  @media (max-width: 480px) {
+    .state-dashboard {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* 1 card per row on mobile */
+    }
+    
+    .state-card {
+      min-height: 120px; /* Adjust height for smaller screens */
+    }
+  
+    .state-card h3 {
+      font-size: 14px; /* Smaller font size */
+    }
+  
+    .district-button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+      font-size: 14px; /* Smaller font size */
+    }
+  }
+  

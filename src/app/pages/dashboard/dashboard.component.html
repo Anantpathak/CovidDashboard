@@ -1,0 +1,25 @@
+<!-- src/app/pages/state-dashboard/state-dashboard.component.html -->
+<div class="select-container">
+    <div class="select-group">
+      <label for="stateSelect" class="select-label">Select State:</label>
+      <select id="stateSelect" (change)="onStateChange($event)">
+        <option *ngFor="let state of getStateOptions()" [value]="state">{{ state }}</option>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedState" class="select-group">
+      <label for="districtSelect" class="select-label">Select District:</label>
+      <select id="districtSelect" (change)="onDistrictChange($event)">
+        <option *ngFor="let district of getDistrictOptions()" [value]="district">{{ district }}</option>
+      </select>
+    </div>
+  
+    <!-- Display District Stats and Charts -->
+    <div class="stats-charts-container">
+      <app-district-stats *ngIf="selectedDistrict && statesData[selectedState]?.districts[selectedDistrict]"
+                          [data]="statesData[selectedState]?.districts[selectedDistrict]"></app-district-stats>
+      <app-district-chart *ngIf="selectedDistrict && statesData[selectedState]?.districts[selectedDistrict]"
+                          [data]="statesData[selectedState]?.districts[selectedDistrict]"></app-district-chart>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div *ngIf="data">
+    <h2>Statistics</h2>
+    <p>Confirmed: {{ data.total?.confirmed }}</p>
+    <p>Deceased: {{ data.total?.deceased }}</p>
+    <p>Recovered: {{ data.total?.recovered }}</p>
+    <p>Tested: {{ data.total?.tested }}</p>
+    <p>Vaccinated (1st Dose): {{ data.total?.vaccinated1 }}</p>
+    <p>Vaccinated (2nd Dose): {{ data.total?.vaccinated2 }}</p>
+  </div>
+  <div *ngIf="!data">
+    <p>No data available.</p>
+  </div>
